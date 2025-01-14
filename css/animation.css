@@ -1,0 +1,59 @@
+.container-anim{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    height: 100%;
+    gap:5%;
+  }
+  .item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(115, 124, 248);
+    border-radius: 5px;
+    border: 2px solid blue;
+    opacity: 0.8;
+  }
+  .item::after{
+    content: '';
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    width: 75%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    /* border-right: 2px solid blue;
+    border-bottom: 2px solid blue; */
+  }
+
+  .item-11{
+    animation: scaling 2s ease infinite;
+  }
+  
+  .item-22, .item-44{
+    animation: scaling 2s 0.30s ease infinite;
+  }
+  
+  .item-33, .item-55, .item-77{
+    animation: scaling 2s 0.60s ease infinite;
+  }
+  .item-66, .item-88{
+    animation: scaling 2s 0.90s ease infinite;
+  }
+  
+  .item-99{
+    animation: scaling 2s 1.2s ease infinite;
+  }
+  
+  @keyframes scaling {
+    0%,100%{
+      transform: scale(1.25);
+    }
+    50%{
+      transform: scale(0);
+    }
+    
+  }
+  
