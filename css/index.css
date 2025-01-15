@@ -4,47 +4,69 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    line-height: 1.5;
-    font-family: Consolas, sans-serif;
-    font-size: 1.2rem;
+    
+}
+body{
     font-weight: 600;
     color: rgba(40, 40, 40, 0.9);
+    line-height: 1.5;
 }
+
 :root{
     --main-color:#F4F4F0;
-
+    --about-color:#84E291;
+    --projects-color:#A6CAEC;
+    --publications-color:#E59EDD;
 }
 nav{
     display:flex;
+    font-family: Consolas, sans-serif;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
     background-color: var(--main-color);;
+    padding-left:1.5rem;
+    font-size: 1.2rem;
+    
 }
 a{
     list-style: none;
     text-decoration: none;
+    color: inherit;
+}
+
+.main-nav i{
+    transition: all 1s;
+    color: gray;
+    position: absolute;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    line-height: 1;
+    z-index: 1;
 }
 .logo{
     width: 4rem;
     height: 4rem;
     overflow: hidden;
+    padding: 0.5rem 0.5rem;
 }
+
 
 .main-nav{
     display: flex;
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
+
 
 .nav-btn{
     padding: 0.5rem 1rem;
     border-radius: 1.5rem;
     border: 1px solid black;
     transition: all 1s ease;
-    
 }
 
 .contact-btn{
@@ -54,13 +76,75 @@ a{
     height: 4rem;
     background-color: white;
     border: 1px solid black;
+    transition: all 1s;
+}
+.contact-btn:hover{
+    text-decoration: underline;
+    color: black;
 }
 
-.nav-btn:hover{
+.menu-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 3px 3px 1px black;
+    transition: all 1s ease;
+    overflow: hidden;
+    position: absolute;
+    top: 130%;
+    height: 0;
+    width:0;
+    opacity: 0;
+}
+
+.menu a{
+    padding: 0rem 1rem;
+    font-weight: 400;
+}
+.menu a:hover{
+    color: white;
+    background-color: black;
+
+}
+
+.menu-container:hover{
+    .nav-btn{
     box-shadow: 5px 5px 1px black;
     background-color: white;
+    text-decoration: underline;
+    }
+    .menu{
+        height: auto;
+        width: 10rem;
+        opacity: 1;
+    }
+    i{
+        transform: rotate(180deg);
+        color: black;
+    }
+
 }
 
+.about-items{
+    background-color: var(--about-color);
+}
+
+.ai-projects-items{
+    background-color: var(--projects-color);
+}
+
+.publications-items{
+    background-color: var(--publications-color);
+}
 
 
 
