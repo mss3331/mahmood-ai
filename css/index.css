@@ -9,7 +9,9 @@
 body{
     font-weight: 600;
     color: rgba(40, 40, 40, 0.9);
+    font-family: Consolas, sans-serif;
     line-height: 1.5;
+    text-align: justify;
 }
 
 :root{
@@ -28,7 +30,6 @@ a{
 /* Navigation bar*/
 nav{
     display:flex;
-    font-family: Consolas, sans-serif;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
@@ -159,42 +160,74 @@ nav{
         color: black;
     }
 
-/* *************************** */
-/* main content */
-.background{
-    position: relative;
-    width: 700px;
-    height: 300px;
-    background: url(/images/about-background-1.jpg) center/cover no-repeat;
-    filter: grayscale(100%);
-    
+/* *********************************** */
+/************ Main Content *************/
+/* section style */
+section{
+    padding: 10vh 10vw;
+    border-bottom: 2px solid var(--main-color);
 }
-.background::before{
-    content: '';
-    position: absolute;
-    cursor: pointer;
-    box-shadow: 0 0 10px black;
-    width: 85px;
-    height: 88px;
-    top: 59%;
-    left: 45%;
+
+/* card styles */
+.card{
+    border: 1px solid black;
+    border-radius: 4px;
     
-}
-.background::after{
-    content: '';
-    background: url(/images/about-background-2.jpg) center/cover no-repeat;
-    position: absolute;
-    width: 700px;
-    height: 300px;
-    opacity: 0;
+    padding: 0.1rem;
     transition: all 1s;
 }
-.background:hover{
-    filter: grayscale(0%);
+.card:hover, .card:focus{
+    box-shadow: 8px 8px 0px black;
+    .card-image{
+        filter: grayscale(0%);
+    }
+    .card-image::after{
+        opacity: 1;    
+    }
+
 }
-.background:hover::after{
-    opacity: 1;
-}
+    /* card content styles*/
+    .card-title{
+        background-color: var(--about-color);
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+    .card-text{
+        font-weight: 400;
+    }
+    .card-image{
+        height: 350px;
+        filter: grayscale(100%);
+        border-radius: 2px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(/images/about-background-1.jpg);
+    }
+    .card-image::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-position: inherit;
+        background-size: inherit;
+        background-repeat: inherit;
+        background-image: url(/images/about-background-2.jpg);
+        opacity: 0;
+        transition: all 1s;
+
+    }
+
+
+
 
 /* Mobile Screen */
 @media (max-width:700px){
@@ -202,12 +235,17 @@ nav{
         flex-direction: column;
         gap: 0.5rem;
     }
-
+    .background{
+        width: 90%;
+    }
     .main-nav{
         flex-direction: column;
         align-items: stretch;
         text-align: center;
         gap:0.5rem;
     }
-    
+    .card-image{
+        height: 150px;
+    }
+   
 }
