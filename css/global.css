@@ -99,17 +99,25 @@ nav{
             }
         /* Icons inside main-nav */
         .main-nav i{
-            transition: all 1s;
+            transition: all 0.5s;
             color: gray;
             position: absolute;
             font-size: 1.5rem;
-            width: 100%;
             text-align: center;
-            top: 100%;
-            line-height: 1;
+            text-align: center;
+            top: 95%;
             z-index: 2;
         }
     /* Menus displayed after hover */
+    .publications-items{
+        background-color: var(--publications-color);
+    }
+    .ai-projects-items{
+        background-color: var(--projects-color);
+    }
+    .about-items{
+        background-color: var(--about-color);
+    }
     .menu-container:hover{
         .nav-btn{
         box-shadow: 5px 5px 1px black;
@@ -126,6 +134,7 @@ nav{
         i{
             transform: rotate(180deg);
             color: black;
+            width: 150%;
         }
 
     }
@@ -156,10 +165,10 @@ border-bottom: 5px solid var(--main-color);
 
 /* card styles */
 .card{
-border: 1px solid black;
-border-radius: 4px;
-padding: 0.1rem;
-transition: all 1s;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.1rem;
+    transition: all 1s;
 }
 .card:hover, .card:focus{
 box-shadow: 8px 8px 0px black;
@@ -179,20 +188,19 @@ box-shadow: 8px 8px 0px black;
 }
 .card-content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.5rem;
+    justify-content: space-between;
 }
 .card-line{
-    width: auto;
-    height: auto;
     border-bottom: 2px dotted gray;
     border-left: 2px dotted gray;
-    
 }
 .card-text{
     display: flex;
-    flex-direction: inherit;
+    flex-direction: column;
     font-weight: 400;
+    
     p{
         padding: 0.5rem;
     }
@@ -201,13 +209,12 @@ box-shadow: 8px 8px 0px black;
     font-size: 0.9rem;
 }
 .card-image{
-    height: 300px;
     filter: grayscale(100%);
     border-radius: 2px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(/images/about-background-1.jpg);
+    
 }
 .card-image::after{
     content: '';
@@ -217,8 +224,6 @@ box-shadow: 8px 8px 0px black;
     background-position: inherit;
     background-size: inherit;
     background-repeat: inherit;
-    background-image: url(/images/about-background-2.jpg);
-    opacity: 0;
     transition: all 1s;
 
 }
@@ -241,8 +246,21 @@ box-shadow: 8px 8px 0px black;
         text-align: center;
         gap:0.5rem;
     }
-    .card-image{
-        height: 150px;
-    }
+    
    
+}
+
+/* Overriding parameter */
+.height300{
+    height: 300px;
+}
+.underline{
+    text-decoration: underline;/* This is the current page (index.html=>About page)*/
+}
+
+.flex-row{
+    flex-direction: row;
+}
+.flex-column{
+    flex-direction: column;
 }

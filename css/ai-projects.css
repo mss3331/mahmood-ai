@@ -1,0 +1,9 @@
+
+.card-title{
+    background-color: var(--projects-color);
+}
+/* logo animation color */
+.item{
+    background-color:  var(--projects-color);
+    border: 2px solid blue;
+}

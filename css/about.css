@@ -1,26 +1,21 @@
 @import url(/css/global.css);
 
-.whoIAm_card_title{
+.card-title{
     background-color: var(--about-color);
 }
-/* .whoIAm_card_title{}
-.whoIAm_card_title{} */
 
-.about{
-    text-decoration: underline;/* This is the current page (index.html=>About page)*/
+.whoIAm_card_image{
+    background-image: url(/images/about-background-1.jpg);
 }
-.about-items{
-    background-color: var(--about-color);
-    
-}
-
-.ai-projects-items{
-    background-color: var(--projects-color);
-}
-
-.publications-items{
-    background-color: var(--publications-color);
+.whoIAm_card_image::after{
+    background-image: url(/images/about-background-2.jpg);
+    opacity: 0;
 }
 
 
+/* logo animation color */
+.item{
+    background-color:  var(--about-color);
+    border: 2px solid green;
+}
     

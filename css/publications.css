@@ -1,0 +1,8 @@
+.card-title{
+    background-color: var(--publications-color);
+}
+/* logo animation color */
+.item{
+    background-color:  var(--publications-color);
+    border: 2px solid magenta;
+}

@@ -10,9 +10,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background-color: rgb(115, 124, 248);
     border-radius: 5px;
-    border: 2px solid blue;
     opacity: 0.8;
   }
   .item::after{
