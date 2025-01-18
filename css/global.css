@@ -16,7 +16,7 @@ html, body{
 }
 
 :root{
-    --main-color:#F4F4F0;
+    --main-color:#e4e4df;
     --about-color:#84E291;
     --projects-color:#A6CAEC;
     --publications-color:#E59EDD;
@@ -28,6 +28,9 @@ a{
     color: inherit;
 }
 
+.nav-transparent{
+    top: -12%;
+}
 /* ****************************************** */
 /* Navigation bar*/
 nav{
@@ -35,9 +38,13 @@ nav{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
-    background-color: var(--main-color);;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--main-color);
     padding-left:1.5rem;
     font-size: 1.2rem;
+    transition: all 1s;
     
 }
 /* animated logo */
@@ -61,14 +68,26 @@ nav{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
         /* Buttons of the main navigation */
         .nav-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
             padding: 0.5rem 1rem;
             border-radius: 1.5rem;
-            
+            background-color: var(--main-color);
             transition: all 1s ease;
+            
+        }
+        .burger-icon{
+            /*burger menu icons*/
+            position: absolute;
+            left: 30px;
+            display: none;
+            transition: all 1s;
+            
         }
         /* Hidden menu styles */
         .menu{
@@ -98,7 +117,7 @@ nav{
 
             }
         /* Icons inside main-nav */
-        .main-nav i{
+        .arrow-icon{
             transition: all 0.5s;
             color: gray;
             position: absolute;
@@ -108,6 +127,8 @@ nav{
             top: 95%;
             z-index: 2;
         }
+        
+        
     /* Menus displayed after hover */
     .publications-items{
         background-color: var(--publications-color);
@@ -122,16 +143,21 @@ nav{
         .nav-btn{
         box-shadow: 5px 5px 1px black;
         background-color: white;
-        text-decoration: underline;
         border: 1px solid black;
+        a{
+            text-decoration: underline;
+        }
+        .burger-icon{/*burger menue rotate*/
+            transform: rotate(90deg);
+        }
         }
         .menu{
             height: auto;
             width: 10rem;
             opacity: 1;
         }
-        /* Icons of the hidden menu */
-        i{
+        /* arrow icon of the hidden menu */
+        .arrow-icon{
             transform: rotate(180deg);
             color: black;
             width: 150%;
@@ -206,6 +232,9 @@ box-shadow: 8px 8px 0px black;
     }
 }
 .card-tail{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
     font-size: 0.9rem;
 }
 .card-image{
@@ -235,22 +264,47 @@ box-shadow: 8px 8px 0px black;
 @media (max-width:700px){
     nav{
         flex-direction: column;
-        gap: 0.5rem;
+        padding: 0;
+        align-items: center;
     }
-    .background{
-        width: 90%;
+    
+    .menu{
+        top: 100%;
     }
     .main-nav{
         flex-direction: column;
         align-items: stretch;
         text-align: center;
-        gap:0.5rem;
+        width: 100%;
+        gap:0;
+    }
+    .contact-btn{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-transparent{
+        top: -50%;
+    }
+    .menu-container{
+        border: 1px solid gray;
+        .nav-btn{
+            width: 100%;
+            border-radius: 0;
+        }
     }
     
+    .arrow-icon{
+        display: none;
+    }
+    .burger-icon{
+        display:block;
+        
+    }
    
 }
 
 /* Overriding parameter */
+
 .height300{
     height: 300px;
 }

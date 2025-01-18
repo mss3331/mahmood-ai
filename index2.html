@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/logo-transp.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/about.css">
@@ -30,8 +31,12 @@
         <div class="main-nav">
             <!-- About menu -->
             <div class="menu-container">
-                <a href="index2.html" class="nav-btn underline">About</a>
-                <i class="fa-solid fa-caret-up"></i>
+                <div class="nav-btn">
+                    <a href="index2.html" class="underline">About</a>
+                    <i class="fa-solid fa-bars burger-icon"></i>
+                </div>
+                
+                <i class="fa-solid fa-caret-up arrow-icon"></i>
                 <div class="menu about-items">
                     <a href="#whoIAm">Who I am?</a>
                     <a href="#">What I do?</a>
@@ -40,8 +45,11 @@
             </div>
             <!-- AI Projects menu -->
             <div class="menu-container ai-projects">
-                <a href="ai-projects.html" class="nav-btn">AI Projects</a>
-                <i class="fa-solid fa-caret-up"></i>
+                <div class="nav-btn">
+                    <a href="ai-projects.html" >AI Projects</a>
+                    <i class="fa-solid fa-bars burger-icon"></i>
+                </div>
+                <i class="fa-solid fa-caret-up arrow-icon"></i>
                 <div class="menu ai-projects-items">
                     <a href="#">Who I am?</a>
                     <a href="#">What I do?</a>
@@ -50,8 +58,12 @@
             </div>
             <!-- Publications menu -->
             <div class="menu-container publications">
-                <a href="publications.html" class="nav-btn">Publications</a>
-                <i class="fa-solid fa-caret-up"></i>
+                
+                <div class="nav-btn">
+                    <a href="publications.html" >Publications</a>
+                    <i class="fa-solid fa-bars burger-icon"></i>
+                </div>
+                <i class="fa-solid fa-caret-up arrow-icon"></i>
                 <div class="menu publications-items">
                     <a href="#">Who I am?</a>
                     <a href="#">What I do?</a>
@@ -75,7 +87,8 @@
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis amet earum quibusdam laboriosam fuga accusamus modi nihil quisquam itaque, ratione aliquid. Veniam aspernatur, aperiam atque voluptate ea temporibus neque architecto?</p>
                         <div class="card-line"></div>
                         <div class="card-tail">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, nemo!</p>
+                            <img src="/images/degree.png" style="width: 1.6rem; height: 1.5rem;">
+                            <p>Computer Science major: BSc. MSc. PhD.(AI)</p>
                         </div>
                     </div>
                 </div>
@@ -85,5 +98,7 @@
          <section></section>
          <!-- Contact Me section -->
     </main>
+    
+    <script src="script/global.js"></script>
 </body>
 </html>
