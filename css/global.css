@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-     
+    /* border: 1px solid darkslateblue; */
 }
 html, body{
     font-weight: 600;
@@ -58,13 +58,14 @@ nav{
 .main-nav{
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
     align-items: center;
+    width: 60%;
 }
     
     /* Container for nav buttons, arrow icon, and hidden menu */
     .menu-container{
         position: relative;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,6 +94,7 @@ nav{
         .menu{
             display: flex;
             flex-direction: column;
+            text-align: center;
             color: black;
             border: 1px solid black;
             box-shadow: 3px 3px 1px black;
@@ -105,13 +107,16 @@ nav{
             width:0;
             opacity: 0;
         }
-
-            .menu a{
-                padding: 0rem 1rem;
-                font-weight: 400;
-                
+            .menu-icon{
+                font-size: 200%;
+                padding: 0.5rem;
             }
-            .menu a:hover{
+            .menu a{
+                padding: 0.5rem 1rem;
+                font-weight: 400;
+                border-top: 1px solid black;
+            }
+            .menu *:hover{
                 color: white;
                 background-color: black;
 
@@ -141,9 +146,9 @@ nav{
     }
     .menu-container:hover{
         .nav-btn{
-        box-shadow: 5px 5px 1px black;
-        background-color: white;
-        border: 1px solid black;
+            box-shadow: 5px 5px 1px black;
+            background-color: white;
+            border: 1px solid black;
         a{
             text-decoration: underline;
         }
@@ -151,9 +156,10 @@ nav{
             transform: rotate(90deg);
         }
         }
+
         .menu{
             height: auto;
-            width: 10rem;
+            width: fit-content;
             opacity: 1;
         }
         /* arrow icon of the hidden menu */
@@ -185,12 +191,16 @@ nav{
 /************ Main Content *************/
 /* section style */
 section{
-padding: 10vh 10vw;
-border-bottom: 5px solid var(--main-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 10vw;     
+    border-bottom: 5px solid var(--main-color);
+    align-items: center;
 }
 
 /* card styles */
 .card{
+    width: 50vw;
     border: 1px solid black;
     border-radius: 4px;
     padding: 0.1rem;
@@ -216,6 +226,7 @@ box-shadow: 8px 8px 0px black;
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
+    font-size: 1em;
     justify-content: space-between;
 }
 .card-line{
@@ -240,8 +251,8 @@ box-shadow: 8px 8px 0px black;
 .card-image{
     filter: grayscale(100%);
     border-radius: 2px;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
     
 }
@@ -262,6 +273,9 @@ box-shadow: 8px 8px 0px black;
 
 /* Mobile Screen */
 @media (max-width:700px){
+    section{
+        padding: 10vh 5vw;
+    }
     nav{
         flex-direction: column;
         padding: 0;
@@ -299,6 +313,9 @@ box-shadow: 8px 8px 0px black;
     .burger-icon{
         display:block;
         
+    }
+    .card{
+        width: 90vw;
     }
    
 }

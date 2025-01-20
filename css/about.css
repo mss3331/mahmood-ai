@@ -1,10 +1,12 @@
-@import url(/css/global.css);
 
 .card-title{
     background-color: var(--about-color);
 }
-
+/* #whoIAm{
+    width: 100%;
+} */
 .whoIAm_card_image{
+    height: 25vw;
     background-image: url(/images/about-background-1.jpg);
 }
 .whoIAm_card_image::after{
@@ -19,3 +21,9 @@
     border: 2px solid green;
 }
     
+@media  (max-width:700px) {
+    .whoIAm_card_image{
+        height: 150px;
+    }
+    
+}
