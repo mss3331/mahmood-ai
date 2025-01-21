@@ -1,4 +1,7 @@
 
+.menu *:hover{
+    color: var(--projects-color);
+}
 .card-title{
     background-color: var(--projects-color);
 }

@@ -1,3 +1,6 @@
+.menu *:hover{
+    color: var(--publications-color);
+}
 .card-title{
     background-color: var(--publications-color);
 }
