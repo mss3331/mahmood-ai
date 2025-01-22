@@ -40,7 +40,7 @@ nav{
     border-bottom: 1px solid black;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     background-color: var(--main-color);
     padding-left:1.5rem;
     font-size: 1.2rem;
@@ -208,6 +208,11 @@ section{
 }
 .card:hover, .card:focus{
     box-shadow: 8px 8px 0px black;
+    .card-title{
+        position: sticky;
+        top:0;
+        z-index:1;
+    }
     .card-image{
         filter: grayscale(0%);
     }
@@ -223,6 +228,7 @@ section{
     font-size: 1.5rem;
     text-align: center;
 }
+
 .card-content{
     display: flex;
     flex-direction: row;
@@ -321,7 +327,12 @@ section{
 }
 
 /* Overriding parameter */
-
+.height600{
+    height: 400px;
+}
+.overflow{
+    overflow: hidden;
+}
 .height300{
     height: 300px;
 }

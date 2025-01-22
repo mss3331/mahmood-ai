@@ -7,12 +7,12 @@ function hideNavigation(event){
     console.log(window.scrollY-old_scrollY
 
     );
-    if(window.scrollY-old_scrollY>5)
+    if(window.scrollY-old_scrollY>2)
     {
         
         document.querySelector('nav').classList.add('nav-transparent');
     }
-    if(window.scrollY-old_scrollY<-5)
+    if(window.scrollY-old_scrollY<-30)
     {
         document.querySelector('nav').classList.remove('nav-transparent');
     }
