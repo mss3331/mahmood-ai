@@ -302,15 +302,24 @@ section{
     }
     *{
         font-size: 1.2rem;
+        color:rgba(40, 40, 40, 0.9);
     }
     button{
         margin-top: 1rem;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         font-weight: 600;
+        font-size: 1.5rem;
+        font-family: Consolas, sans-serif;
         background-color: var(--about-color);
-        border:3px solid green;
+        border:2px solid gray;
+        cursor: pointer;
         
+    }
+    button:hover{
+        border-color: var(--about-color);
+        background-color: black;
+        color: var(--about-color);
     }
     textarea{
         text-align: justify;
