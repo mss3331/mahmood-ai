@@ -13,14 +13,18 @@ html, body{
     line-height: 1.5;
     text-align: justify;
     scroll-behavior: smooth;
+    background-color: rgb(245,245,245);
 }
-
 :root{
     --main-color:#e4e4df;
     --about-color:#84E291;
     --projects-color:#A6CAEC;
     --publications-color:#E59EDD;
 }
+
+/* main{
+    margin-bottom: 50px;
+} */
 
 a{
     list-style: none;
@@ -194,8 +198,9 @@ section{
     display: flex;
     flex-direction: column;
     padding: 10vh 10vw;     
-    border-bottom: 5px solid var(--main-color);
+    border-top: 5px solid var(--main-color);
     align-items: center;
+    
 }
 
 /* card styles */
@@ -205,6 +210,7 @@ section{
     border-radius: 4px;
     padding: 0.1rem;
     transition: all 1s;
+    background-color: white;
 }
 .card:hover, .card:focus{
     box-shadow: 8px 8px 0px black;
@@ -274,7 +280,64 @@ section{
 
 }
 
+/* Contact me form */
+.card.contact-me{
+    width: 200px;
+}
+.card-content form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        input{
+            outline-style: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+    *{
+        font-size: 1.2rem;
+    }
+    button{
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        background-color: var(--about-color);
+        border:3px solid green;
+        
+    }
+    textarea{
+        text-align: justify;
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100px;
+    background-color: var(--main-color);
+    border-top: 2px solid gray;
+    
+    img{
+        height: 20px;
+        filter: grayscale(100%);
+    }
 
+    span{
+        font-weight: 900;
+    }
+}
+footer img:hover{
+    filter: grayscale(0);
+}
 
 
 /* Mobile Screen */
@@ -323,7 +386,40 @@ section{
     .card{
         width: 90vw;
     }
+   footer{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: top;
+    gap: 0.5rem;
+    height: 100%;
+    padding-bottom: 50px;
+    img{
+        height: 40px;
+    }
    
+   
+    
+}
+
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+   .card-content form{
+        width: 100%;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.5rem;
+            input{
+                width: 240px;
+            }
+        }
+        
+   }
 }
 
 /* Overriding parameter */

@@ -10,3 +10,7 @@
     background-color:  var(--projects-color);
     border: 2px solid blue;
 }
+
+footer span{
+    color: blue;
+}

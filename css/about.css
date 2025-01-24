@@ -150,7 +150,10 @@
     background-color:  var(--about-color);
     border: 2px solid green;
 }
-
+/* Footer */
+footer span{
+    color: green;
+}
 @keyframes rotate {
     100%{
         transform: rotate(360deg);
