@@ -295,14 +295,14 @@ section{
         margin-bottom: 1rem;
         input{
             outline-style: none;
-            border: none;
             border-bottom: 1px solid black;
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0,0,0,0.05);
         }
     }
     *{
         font-size: 1.2rem;
         color:rgba(40, 40, 40, 0.9);
+        border: none;
     }
     button{
         margin-top: 1rem;
@@ -323,6 +323,9 @@ section{
     }
     textarea{
         text-align: justify;
+        outline-style: none;
+        background-color: rgba(0,0,0,0.05);
+        border-top:2px solid gray;
     }
 }
 footer{
@@ -336,7 +339,7 @@ footer{
     border-top: 2px solid gray;
     
     img{
-        height: 20px;
+        width: 30px;
         filter: grayscale(100%);
     }
 
@@ -398,14 +401,11 @@ footer img:hover{
    footer{
     flex-direction: column;
     text-align: center;
-    justify-content: center;
     align-items: top;
     gap: 0.5rem;
     height: 100%;
     padding-bottom: 50px;
-    img{
-        height: 40px;
-    }
+    
    
    
     
@@ -414,7 +414,11 @@ footer img:hover{
 .contact-icons{
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    align-items: center;
+    gap:1.5rem;
+    img{
+        width: 40px;
+    }
 }
    .card-content form{
         width: 100%;
