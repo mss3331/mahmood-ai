@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
 *,
 *::after,
 *::before{
@@ -9,7 +10,7 @@
 html, body{
     font-weight: 600;
     color: rgba(40, 40, 40, 0.9);
-    font-family: Consolas, sans-serif;
+    font-family: "Reem Kufi Fun",Consolas, sans-serif;
     line-height: 1.5;
     text-align: justify;
     scroll-behavior: smooth;
@@ -31,7 +32,33 @@ a{
     text-decoration: none;
     color: inherit;
 }
+p a{
+    font-weight: 600;
+    color: var(--tab-color-bold);
+    text-decoration: underline;
+}
+p{
+    text-indent: 1rem;
+    text-align: justify;
+    font-weight: 400;
+    position: relative;
+}
+ul{
+    position: relative;
+    width: 100%;
+    text-align: justify;
+    font-weight: 400;
+    left: 2rem;
+    margin-bottom: 1rem;
+}
 
+.initial-letter{
+    font-size: 200%;
+    font-weight: bold;
+    color: green;
+    position: relative;
+    top:5px;
+}
 .nav-transparent{
     top: -12%;
 }
@@ -47,7 +74,7 @@ nav{
     z-index: 3;
     background-color: var(--main-color);
     padding-left:1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: all 1s;
     
 }
@@ -216,8 +243,8 @@ section{
     box-shadow: 8px 8px 0px black;
     .card-title{
         position: sticky;
-        top:0;
-        z-index:1;
+        top:1px;
+        z-index:2;
     }
     .card-image{
         filter: grayscale(0%);
@@ -249,16 +276,15 @@ section{
     display: flex;
     flex-direction: column;
     font-weight: 400;
+    padding: 0.5rem;
     
-    p{
-        padding: 0.5rem;
-    }
 }
 .card-tail{
     display: flex;
     align-items: center;
     font-weight: 600;
     font-size: 0.9rem;
+    padding: 0.5rem;
 }
 .card-image{
     filter: grayscale(100%);
@@ -279,7 +305,36 @@ section{
     transition: all 1s;
 
 }
-
+/* Pop up images*/
+.popup-image{
+    position: relative;
+    background-color: rgba(0,0,0,0.1);
+    /* Click Icon */
+    i{
+        position: absolute;
+        top: -25%;
+        rotate: 180deg;
+        opacity: 0.6;
+    }
+    img{
+        position: absolute;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 2px;
+        box-shadow: 1px 1px 5px black ;
+        top:-100px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 2s;
+    }
+}
+.popup-image:hover{
+    img{
+        z-index: 1;
+        opacity: 0.9;
+    }
+}
 /* Contact me form */
 .card.contact-me{
     width: 200px;

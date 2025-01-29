@@ -1,4 +1,6 @@
-
+:root{
+    --tab-color-bold:green;
+}
 .card-title{
     background-color: var(--about-color);
 }
@@ -8,9 +10,11 @@
 
 
 .whoIAm_card_image{
-    height: 25vw;
+    height: 20vw;
     background-image: url(/images/about-background-1.jpg);
+    background-position: top;
 }
+
 .whoIAm_card_image::after{
     background-image: url(/images/about-background-2.jpg);
     opacity: 0;
@@ -30,10 +34,7 @@
     margin-bottom: 0.5rem;
     padding-left:0.5rem;
     padding-right:0.5rem;
-    p{
-        text-align: justify;
-        font-weight: 400;
-    }
+   
     
 }
 
@@ -45,16 +46,12 @@
         position: absolute;
         top: 35%;
         left: 30%;
-        z-index: 1;
+        z-index: 0;
         font-size: 60px;
         transition: all 2s;
     }
 }
-.teacher{
-    margin-top: 5px;
-    font-size: 50px;
-    transition: all 2s;
-}
+
 .videos{
     width: 100%;
     video{
@@ -68,13 +65,18 @@
 .rotating{
     position: absolute;
     text-align: center;
-    width: 200px;
-    height: 200px;
+    /* This code used to be width and height 200px  */
+    width: 100px;
+    height: 100px;
+    left: 25%;
+    top:25%;
+    /* you can delete the above 4 lines and set just the width and height */
     img{
         position: absolute;
         width: 50px;
         left: 70px;
         top: 75px;
+        opacity: 0.05;
     }
 }
 .papers{
@@ -95,9 +97,14 @@
 .card:hover{
     
     .sub-content:hover{
-        i{
-            text-shadow: 0 0 8px var(--about-color);
+        .rotating{
+            border-bottom: 2px dashed green;
+            border-radius: 5px;
         }
+        p{
+            z-index: 1;
+        }
+        
         .rotating:nth-of-type(1){
             animation: rotate 4s 0s linear infinite;
         }
@@ -138,7 +145,7 @@
         .sub-content-animation{
             img{
                 animation: translate 4s 0s linear infinite;
-                z-index: 0;
+                z-index: 1;
             }
     }
         
@@ -163,12 +170,21 @@ footer span{
 @keyframes translate {
     0%{
         transform: scale(0.5) ;
+        opacity: 0;
     }
-    50%,55%{
+    25%{
+        opacity: 1;
+    }
+    50%{
         transform: translateX(200%) scale(1);
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
     }
     100%{
         transform: translateX(0) scale(0.5);
+        opacity: 0;
     }
     
     
@@ -176,7 +192,9 @@ footer span{
 }
 @media  (max-width:700px) {
     .whoIAm_card_image{
-        height: 150px;
+        height: 250px;
+        background-size: cover;
+        background-position: 70% center;
     }
     #whatIDo .card-content{
         flex-direction: column;
