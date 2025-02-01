@@ -18,6 +18,7 @@
     video{
         opacity: 0.9;
         border-radius: 4px;
+        height: 50%;
     }
     p, i{
         color: white;
