@@ -16,6 +16,7 @@ html, body{
     scroll-behavior: smooth;
     background-color: rgb(245,245,245);
 }
+
 :root{
     --main-color:#e4e4df;
     --about-color:#84E291;
@@ -233,6 +234,7 @@ section{
 /* card styles */
 .card{
     width: 50vw;
+    max-width: 94vw;
     border: 1px solid black;
     border-radius: 4px;
     padding: 0.1rem;
@@ -313,8 +315,7 @@ section{
     i{
         position: absolute;
         top: -25%;
-        rotate: 180deg;
-        opacity: 0.6;
+        opacity: 0.3;
     }
     img{
         position: absolute;
@@ -335,6 +336,7 @@ section{
         opacity: 0.9;
     }
 }
+
 /* Contact me form */
 .card.contact-me{
     width: 200px;
@@ -409,6 +411,7 @@ footer img:hover{
 
 /* Mobile Screen */
 @media (max-width:700px){
+    
     section{
         padding: 10vh 5vw;
     }

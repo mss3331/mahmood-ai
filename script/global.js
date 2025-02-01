@@ -1,12 +1,9 @@
 
-document.addEventListener('DOMContentLoaded',()=>document.addEventListener('scroll', hideNavigation));
+document.addEventListener('DOMContentLoaded',run);
 
 let old_scrollY=0;
-
 function hideNavigation(event){
-    console.log(window.scrollY-old_scrollY
-
-    );
+    
     if(window.scrollY-old_scrollY>2)
     {
         
@@ -17,4 +14,20 @@ function hideNavigation(event){
         document.querySelector('nav').classList.remove('nav-transparent');
     }
     old_scrollY=window.scrollY;
+}
+function closeDemo(){
+    document.querySelector('.demo').remove();
+    sessionStorage.setItem("demo","true");
+}
+function run(){
+    document.addEventListener('scroll', hideNavigation);
+    const demo=sessionStorage.getItem("demo");
+
+    if(demo==undefined && window.screen.width<700)
+    {
+        document.querySelector('.demo').style.opacity="1";
+        document.querySelector('#close_demo_icon').addEventListener('click', closeDemo);
+    }
+    else
+        closeDemo();
 }
