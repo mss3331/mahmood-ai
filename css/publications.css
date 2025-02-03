@@ -1,16 +1,98 @@
+:root{
+    --tab-color-bold:#ca9f03;
+}
 .menu *:hover{
     color: var(--publications-color);
 }
 .card-title{
     background-color: var(--publications-color);
 }
+.fa-computer-mouse{
+    position: absolute;
+    top:0px;
+    right: 10px;
+    opacity: 0.6;
+}
+.hover-area{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom:120px;
+    right: 10px;
+    border: 1px solid black;
+    z-index: 2;
+}
+#overview{
+    width: fit-content;
+    transform-style: preserve-3d;
+
+    .card-content{
+        flex-direction: column;
+    }
+    a{
+        font-size: larger;
+    }
+    .sub-content{
+        position: relative;
+        perspective: 1000px;
+        perspective-origin: 0 0;
+        transform-style: preserve-3d;
+        width: 400px;
+        backface-visibility:hidden;
+        transition: all 2s;
+        
+        img{
+            width: 100%;
+        }
+    }
+    .sub-content:last-child{
+        margin-top: 10px;
+    }
+    .flip{
+        position: relative;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        padding: 0.5rem;
+        backface-visibility:hidden;
+        
+    }
+    .card2{
+        position: absolute;
+        transform: rotateY(180deg);
+        img{
+            height:150px;
+            width: auto;
+        }
+    }
+
+    /* .sub-content:first-child img{
+        width: 500px;
+        max-width: 80vw;
+        border: 1px solid black;
+    } */
+    ul{
+        font-size: 0.8em;
+        margin-left: 0.5rem;
+    }
+    
+}
+#overview:has(.hover-area:hover){
+    .sub-content:last-child {
+        transform: rotateY(180deg);
+    }
+}
+
 /* logo animation color */
 .item{
     background-color:  var(--publications-color);
-    border: 2px solid magenta;
+    border: 2px solid var(--tab-color-bold);
 }
 
 /* Developed by color */
 footer span{
-    color: magenta;
+    color: var(--tab-color-bold);
+}
+
+
+@media  (max-width:700px) {
+   
 }

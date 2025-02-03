@@ -38,7 +38,9 @@
     color: var(--about-color);
 }
 
-
+#whoIAm{
+    width: 50vw;
+}
 .whoIAm_card_image{
     height: 20vw;
     background-image: url(/images/about-background-1.jpg);
@@ -52,21 +54,16 @@
 #whatIDo{
     gap: 0.5rem;
     width: 95vw; 
-   
+    ul{
+        position: relative;
+        width: 100%;
+        text-align: justify;
+        font-weight: 400;
+        left: 2rem;
+        margin-bottom: 1rem;
+    }
 }
-.sub-content{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    text-align: center;
-    width: fit-content;
-    margin-bottom: 0.5rem;
-    padding-left:0.5rem;
-    padding-right:0.5rem;
-   
-    
-}
+
 
 .sub-content-animation{
     position: relative;
@@ -224,12 +221,15 @@ footer span{
     
 }
 @media  (max-width:700px) {
+    #whoIAm{
+        width: fit-content;
+    }
     .whoIAm_card_image{
         height: 250px;
         background-size: cover;
         background-position: 70% center;
     }
-    #whatIDo .card-content{
-        flex-direction: column;
+    .whoIAm .card-content{
+        flex-direction: row;
     }
 }
