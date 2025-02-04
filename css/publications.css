@@ -15,17 +15,17 @@
 }
 .hover-area{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 40%;
     bottom:120px;
-    right: 10px;
-    border: 1px solid black;
+    top: 30%;
+    right: 0px;
     z-index: 2;
 }
 #overview{
-    width: fit-content;
+    width: 450px;
     transform-style: preserve-3d;
-
+    
     .card-content{
         flex-direction: column;
     }
@@ -37,7 +37,6 @@
         perspective: 1000px;
         perspective-origin: 0 0;
         transform-style: preserve-3d;
-        width: 400px;
         backface-visibility:hidden;
         transition: all 2s;
         
