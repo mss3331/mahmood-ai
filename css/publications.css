@@ -22,34 +22,36 @@
     right: 0px;
     z-index: 2;
 }
+/* ********* General Card style *********** */
+.sub-content{
+    position: relative;
+    perspective: 1000px;
+    perspective-origin: 0 0;
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+    img{
+        width: 100%;
+    }
+}
+/* ********Overview Section ************ */
 #overview{
     width: 450px;
     transform-style: preserve-3d;
-    
+    *{
+        transition: all 2s;
+    }
     .card-content{
         flex-direction: column;
     }
     a{
         font-size: larger;
     }
-    .sub-content{
-        position: relative;
-        perspective: 1000px;
-        perspective-origin: 0 0;
-        transform-style: preserve-3d;
-        backface-visibility:hidden;
-        transition: all 2s;
-        
-        img{
-            width: 100%;
-        }
-    }
+    
     .sub-content:last-child{
         margin-top: 10px;
     }
     .flip{
         position: relative;
-        box-shadow: 0 0 5px rgba(0,0,0,0.3);
         padding: 0.5rem;
         backface-visibility:hidden;
         
@@ -80,7 +82,97 @@
     }
 }
 
-/* logo animation color */
+#overview:hover{
+    
+    .sub-content{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* ********** Publication section ************* */
+#publication_list{
+    
+    .card-content{
+        justify-content: space-around;
+        gap: 0.5rem;
+        align-items: start;
+        flex-wrap: wrap;
+    }
+    /* sub-content contains mini cards */
+    .sub-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        width: 380px;
+        gap:0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        padding: 0;
+        /* Publication card title */
+        .card-title{
+            position: relative;
+            top:0;
+            padding: 0 5px;
+            text-align: center;
+            border-bottom: 1px solid black;
+            font-weight: 400;
+            font-size: medium;
+        }
+    }
+}
+.publication-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    img{
+        border: 2px solid var(--tab-color-bold);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        height: 200px;
+        width: auto;
+    }
+    .publication-info{
+       font-size: small;
+       p{
+        text-indent: 0;
+       }
+    }
+    
+}
+.publication-footer{
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* z-index: 10; */
+    /* height: 35px; */
+    i{
+        position: relative;
+    }
+    p{
+        text-align: center;
+    }
+}
+.key_figures{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* backface-visibility: hidden; */
+    transform: rotateX(-90deg);
+    width: 100%;
+    gap: 0.5rem;
+    transition: all ease-in-out 1s;
+    transform-origin: top center;
+    
+}
+.publication-footer:hover{
+    .key_figures{
+        
+        transform: rotateX(0deg);
+    }
+}
+/********* logo animation color **************/
 .item{
     background-color:  var(--publications-color);
     border: 2px solid var(--tab-color-bold);
@@ -91,7 +183,18 @@ footer span{
     color: var(--tab-color-bold);
 }
 
-
+ /********* Mobile view *****************/
 @media  (max-width:700px) {
-   
+    #publication_list{
+        .sub-content{
+            width: 100%;
+        }
+        .publication-content{
+            flex-direction: column;
+            align-items: center;
+            .publication-info p{
+                text-align: justify;
+            }
+        }
+    }
 }

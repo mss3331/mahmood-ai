@@ -27,7 +27,9 @@ html, body{
 /* main{
     margin-bottom: 50px;
 } */
-
+li{
+    word-spacing: 0.3em;
+}
 a{
     list-style: none;
     text-decoration: none;
@@ -223,7 +225,7 @@ nav{
 section{
     display: flex;
     flex-direction: column;
-    padding: 10vh 10vw;     
+    padding: 10vh 2vw;     
     border-top: 5px solid var(--main-color);
     align-items: center;
 }
@@ -407,8 +409,10 @@ footer{
     border-top: 2px solid gray;
     
     img{
+        
         width: 30px;
         filter: grayscale(100%);
+        
     }
 
     span{
@@ -484,6 +488,8 @@ footer img:hover{
 }
 
 .contact-icons{
+    position: relative;
+    z-index: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
