@@ -16,9 +16,8 @@
 .hover-area{
     position: absolute;
     width: 60px;
-    height: 40%;
-    bottom:120px;
-    top: 30%;
+    height: 60%;
+    top: 10%;
     right: 0px;
     z-index: 2;
 }
@@ -33,19 +32,32 @@
 /* ********Overview Section ************ */
 #overview{
     width: 450px;
-    transform-style: preserve-3d;
-    *{
+    
+    .sub-content{
         transition: all 2s;
     }
     .card-content{
+        position: relative;
         flex-direction: column;
+        
     }
     a{
         font-size: larger;
     }
-    
+    .sub-content{
+        li:hover{
+            background-color: black;
+            color: white;
+        }
+    }
     .sub-content:last-child{
+        transform-style: preserve-3d;
+        perspective: 1000px;
         margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        
+        
     }
     .flip{
         position: relative;
@@ -53,9 +65,13 @@
         backface-visibility:hidden;
         
     }
+    .card1{
+        transform: rotateX(0deg);
+    }
     .card2{
         position: absolute;
         transform: rotateY(180deg);
+        
         img{
             height:150px;
             width: auto;
@@ -77,6 +93,7 @@
     .sub-content:last-child {
         transform: rotateY(180deg);
     }
+   
 }
 
 #overview:hover{
@@ -120,6 +137,15 @@
         position: relative;
         z-index: 0;
     }
+    
+}
+#publication_list .sub-content:hover{
+    .publication-content img{
+        
+        border: 2px solid var(--tab-color-bold);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        
+    }
 }
 .publication-content{
     display: flex;
@@ -127,11 +153,8 @@
     justify-content: center;
     gap: 0.5rem;
     padding: 0 0.5rem;
- 
-    
     img{
-        border: 2px solid var(--tab-color-bold);
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        transition: all 1s;
         height: 200px;
         width: auto;
     }
@@ -148,7 +171,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
+    color:var(--tab-color-bold);
+    background-color: rgba(0, 0, 0, 0.05);
     height: 35px;
     i{
         position: relative;
@@ -165,7 +189,8 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     grid-template-columns: repeat(2,1fr);
     /* border-top: 1px solid black; */
-    transform:skewX(-5deg) rotateX(92deg) ;
+    transform:skewX(-20deg) rotateX(92deg) ;
+    opacity: 0.5;
     z-index: 1;
     width: 100%;
     gap: 0.5rem;
@@ -186,8 +211,15 @@
     
 }
 .publication-footer:hover{
+    
+    
+    i{
+        opacity: 1;
+    }
     .key_figures{
-        transform: skewX(0deg) rotateX(0deg);
+        transform: skewX(-1deg) rotateX(0deg);
+        opacity: 1;
+        z-index: 2;
         .back_cover{
             opacity: 0;
         }

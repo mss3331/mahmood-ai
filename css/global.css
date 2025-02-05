@@ -246,7 +246,7 @@ section:first-child{
     .card-title{
         position: sticky;
         top:1px;
-        z-index:2;
+        z-index:3;
     }
     .card-image{
         filter: grayscale(0%);
