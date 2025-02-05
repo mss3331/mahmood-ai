@@ -225,7 +225,7 @@ nav{
 section{
     display: flex;
     flex-direction: column;
-    padding: 10vh 2vw;     
+    padding: 10vh 1vw;     
     border-top: 5px solid var(--main-color);
     align-items: center;
 }
@@ -235,7 +235,6 @@ section:first-child{
 
 /* card styles */
 .card{
-    max-width: 94vw;
     border: 1px solid black;
     border-radius: 4px;
     padding: 0.1rem;
@@ -426,7 +425,9 @@ footer img:hover{
 
 /* Mobile Screen */
 @media (max-width:700px){
-    
+    /* .card{
+        max-width: 94vw;
+    } */
     section{
         padding: 10vh 5vw;
     }

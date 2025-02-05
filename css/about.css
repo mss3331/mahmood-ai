@@ -221,8 +221,8 @@ footer span{
     
 }
 @media  (max-width:700px) {
-    #whoIAm{
-        width: fit-content;
+    #whoIAm ,#whatIDo{
+        width: 100%;
     }
     .whoIAm_card_image{
         height: 250px;
