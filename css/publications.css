@@ -135,6 +135,7 @@
 #publication_list:hover .sub-content{
     .card-title{
         position: relative;
+        top: 0;
         z-index: 0;
     }
     
@@ -157,6 +158,11 @@
         transition: all 1s;
         height: 200px;
         width: auto;
+    }
+    a{
+        float: left;
+        margin-right: 0.5rem;
+    
     }
     .publication-info{
        font-size: small;
@@ -219,7 +225,7 @@
     .key_figures{
         transform: skewX(-1deg) rotateX(0deg);
         opacity: 1;
-        z-index: 2;
+        z-index: 1;
         .back_cover{
             opacity: 0;
         }
@@ -245,12 +251,8 @@ footer span{
         .sub-content{
             width: 100%;
         }
-        .publication-content{
-            flex-direction: column;
-            align-items: center;
-            .publication-info p{
-                text-align: justify;
-            }
-        }
+    }
+    .publication-info p{
+        text-align: justify;
     }
 }
