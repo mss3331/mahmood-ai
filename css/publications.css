@@ -104,7 +104,7 @@
 }
 
 /* ********** Publication section ************* */
-#publication_list{
+.publication_list{
     .card-content{
         justify-content: space-around;
         gap: 0.5rem;
@@ -132,7 +132,7 @@
         }
     }
 }
-#publication_list:hover .sub-content{
+.publication_list:hover .sub-content{
     .card-title{
         position: relative;
         top: 0;
@@ -140,7 +140,7 @@
     }
     
 }
-#publication_list .sub-content:hover{
+.publication_list .sub-content:hover{
     .publication-content img{
         
         border: 2px solid var(--tab-color-bold);
@@ -254,7 +254,7 @@ footer span{
     #overview{
         width:100%;
     }
-    #publication_list{
+    .publication_list{
         .sub-content{
             width: 100%;
         }

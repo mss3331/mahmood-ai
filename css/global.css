@@ -136,7 +136,7 @@ nav{
             z-index: 1;
             top: 130%;
             height: 0;
-            width:0;
+            width:280px;
             opacity: 0;
         }
             .menu-icon{
@@ -191,7 +191,6 @@ nav{
 
         .menu{
             height: auto;
-            width: fit-content;
             opacity: 1;
         }
         /* arrow icon of the hidden menu */
