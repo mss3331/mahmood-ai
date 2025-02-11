@@ -12,7 +12,7 @@ function deleteBody(event){
 
 function getNewBody(){
     // const xhr = new XMLHttpRequest();
-    $("#scholar").load("req-page.php");
+    $("#scholar").load("./req-page.php");
     // xhr.open('GET', 'https://scholar.google.com/citations?user=Aj2-v14AAAAJ&hl=en');
 
     // xhr.onreadystatechange=function() {
