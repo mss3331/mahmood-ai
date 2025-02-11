@@ -105,6 +105,7 @@
 
 /* ********** Publication section ************* */
 .publication_list{
+    width: 80vw;
     .card-content{
         justify-content: space-around;
         gap: 0.5rem;
@@ -255,11 +256,10 @@ footer span{
         width:100%;
     }
     .publication_list{
+        width: 90vw;
         .sub-content{
             width: 100%;
         }
     }
-    .publication-info p{
-        text-align: justify;
-    }
+    
 }

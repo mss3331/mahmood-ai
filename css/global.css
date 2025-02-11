@@ -128,7 +128,6 @@ nav{
             flex-direction: column;
             text-align: center;
             color: black;
-            border: 1px solid black;
             box-shadow: 3px 3px 1px black;
             transition: all 1s ease;
             overflow: hidden;
@@ -146,7 +145,7 @@ nav{
             .menu a{
                 padding: 0.5rem 1rem;
                 font-weight: 400;
-                border-top: 1px solid black;
+                border-bottom: 1px solid black;
             }
             .menu *:hover{
                 color: white;
