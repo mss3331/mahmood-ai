@@ -16,7 +16,10 @@ function hideNavigation(event){
     old_scrollY=window.scrollY;
 }
 function closeDemo(){
-    document.querySelector('.demo').remove();
+    if(document.querySelector('.demo'))
+    {
+        document.querySelector('.demo').remove();
+    }
     sessionStorage.setItem("demo","true");
 }
 function run(){

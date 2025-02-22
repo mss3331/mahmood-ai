@@ -1,4 +1,6 @@
-
+:root{
+    --tab-color-bold:blue;
+}
 .menu *:hover{
     color: var(--projects-color);
 }
@@ -8,9 +10,59 @@
 /* logo animation color */
 .item{
     background-color:  var(--projects-color);
-    border: 2px solid blue;
+    border: 2px solid var(--tab-color-bold);
 }
-
+#ai-intro{
+    /* spinning loading icon */
+    .sub-content{
+        position: relative;
+    }
+    .sub-content:first-of-type i{
+        position: absolute;
+        top: 50px;
+        color: var(--tab-color-bold);
+        font-size: 300%;
+        z-index: 0;
+    }
+    video{
+        width: 500px;
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    .project-icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap:3%;
+        margin-top: 10px;
+        .plus-sign{
+            height: 10px;
+            
+        }
+        img{
+            height: 50px;
+        }
+        .eye_icon{
+            height: 80px;
+        }
+        
+    }
+}
 footer span{
     color: blue;
+}
+
+@media (max-width:700px) {
+
+    #ai-intro{
+
+        video{
+            width:100%;
+        }
+        
+    }
+    
 }
