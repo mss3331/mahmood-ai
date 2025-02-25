@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/ai-projects.css">
     <link rel="stylesheet" href="css/animation.css">
+    <script src="./script/projectList.js"></script>
     <title>Mahmood AI Protfilo</title>
     
     <!-- Google tag (gtag.js) -->
@@ -46,7 +47,7 @@
             <!-- About menu -->
             <div class="menu-container">
                 <div class="nav-btn">
-                    <a href="index.html" class="underline">About</a>
+                    <a href="index.html">About</a>
                     <i class="fa-solid fa-bars burger-icon"></i>
                 </div>
                 
@@ -61,7 +62,7 @@
             <!-- AI Projects menu -->
             <div class="menu-container ai-projects">
                 <div class="nav-btn">
-                    <a href="ai-projects.html" >AI Projects</a>
+                    <a href="ai-projects.html" class="underline">AI Projects</a>
                     <i class="fa-solid fa-bars burger-icon"></i>
                 </div>
                 <i class="fa-solid fa-caret-up arrow-icon"></i>
@@ -101,9 +102,10 @@
                 <div class="card-title">Introduction</div>
                 <div class="card-content">
                     <div class="sub-content">
-                        <i class="fa-solid fa-spinner fa-spin"></i>
+                        <!-- <i class="fa-solid fa-spinner fa-spin"></i> -->
                         <video src="./images/projects_images/coding.mp4" muted loop autoplay></video>
-                        <div class="project-icons">
+                        
+                        <div class="project-icons project-icons-container">
                             <div class="project-icons">
                                 <img src="./images/projects_images/pycharm.gif" alt="" srcset="">
                                 <img class="plus-sign" src="./images/projects_images/plus.png" alt="" srcset="">
@@ -118,16 +120,20 @@
                                 <img src="./images/projects_images/matplotlib.png" alt="" srcset="">
                                 <img class="plus-sign" src="./images/projects_images/plus.png" alt="" srcset="">
                                 <img class="eye_icon" src="./images/projects_images/stack_images.PNG" alt="" srcset="">
+                                <img class="plus-sign" src="./images/projects_images/plus.png" alt="" srcset="">
+                                <img src="./images/projects_images/wb.png" alt="" srcset="">
 
                             </div>
-                            <div>
-                                
-                            </div>
+                            
+                            <img class="plus-sign" src="./images/projects_images/equal.png" alt="" srcset="">
+                            
 
                             <a href="https://www.flaticon.com/free-animated-icons/vision" title="vision animated icons">
-                                <img class="eye_icon" src="./images/projects_images/eye.gif" alt="Vision animated icons created by Freepik - Flaticon" srcset="">
-                                </a>
-                                Computer Vision (A.I.)
+                                <img class="eye_icon" src="./images/projects_images/eye_transparent.gif" alt="Vision animated icons created by Freepik - Flaticon" srcset="">
+                            </a>
+                            <p style="position: absolute; bottom: -5px;">Computer Vision (A.I.)</p>
+                            
+
                         </div>
                     </div>
 
@@ -148,14 +154,96 @@
             </div>
         </section>
         
-        <!-- What I do? section -->
+        <!-- Project List Section -->
         <section>
-            <div style="width:80vw;">
-                <img style="width:100%"src="./images/under-reconstruction.gif" alt="" srcset="">
-            </div>
+            <div class="card" id="project-list">
+                <div class="card-title">Project List</div>
+                <div class="cards-container">
+                    <!-- Card 1 -->
+                    <div class="mini-card mini-card1">
+                        
+                        <div class="subcontents-container">
+                            
+                            <div class="subcontent left rotateRight">
+                                <div class="card-title">-</div>
+                                <div class="face-content">
+                                    <p>Left</p>
+                                    <video src="./images/projects_images/contrast enhancement/front-video.mp4" muted autoplay controls></video>
+                                </div>
+                            </div>
+
+                            <div class="subcontent front">
+                                <div class="card-title">
+                                    <p>Click to unfold</p> 
+                                    <div class="box-icons-container">
+                                        <i class="fa-solid fa-box"></i>
+                                        <i class="fa-solid fa-box-open hide"></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="face-content">
+                                    <p>Region-based Contrast Enhancement</p>
+                                    <video src="./images/projects_images/contrast enhancement/front-video.mp4" muted autoplay controls></video>
+                                </div>
+                            </div>
+                            <div class="subcontent right rotateLeft">
+                                <div class="card-title">-</div>
+                                <div class="face-content">
+                                    <p>Right</p>
+                                    <video src="./images/projects_images/contrast enhancement/front-video.mp4" muted autoplay controls></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Card 2 -->
+                    <div class="mini-card mini-card2">
+                        <div class="subcontents-container">
+                            
+                            <div class="subcontent left rotateRight">
+                                <div class="card-title">-</div>
+                                Left
+                            </div>
+
+                            <div class="subcontent front">
+                                <div class="card-title">
+                                    <p>Click to unfold</p> 
+                                    <div class="box-icons-container">
+                                        <i class="fa-solid fa-box"></i>
+                                        <i class="fa-solid fa-box-open hide"></i>
+                                        
+                                    </div>
+                                </div>
+                                <div class="front-content">
+                                    <p>Region-based Contrast Enhancement</p>
+                                    <video src="./images/projects_images/contrast enhancement/front-video.mp4" muted autoplay controls></video>
+                                </div>
+                            </div>
+                            <div class="subcontent right rotateLeft">
+                                <div class="card-title">-</div>
+                                Right
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="mini-card mini-card3">
+                        <div class="subcontents-container">
+                            <div class="subcontent">Left</div>
+                            <div class="subcontent front">
+                                <div class="card-title not-viewed">Viewed</div>
+                                Front
+                            </div>
+                            <div class="subcontent">Right</div>
+                        </div>
+                    </div>
+
+                </div>
         </section>
         
-
+        
+        <!-- <div style="width:80vw;">
+            <img style="width:100%"src="./images/under-reconstruction.gif" alt="" srcset="">
+        </div> -->
          <!-- Contact Me section -->
     </main>
     
