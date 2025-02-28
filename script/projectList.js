@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded',run);
 
 function run(){
-    const cards_head=document.querySelector('.front .card-title');
+    const cards_head=document.querySelectorAll('.front .card-title');
 
-    cards_head.addEventListener('click',unfoldLeftRight);
+    cards_head.forEach(card=>card.addEventListener('click',unfoldLeftRight));
+    
         
 
 }
@@ -34,11 +35,24 @@ function unfoldLeftRight(event)
             title.style.backgroundColor="var(--projects-color)";
             front.querySelector('.card-title p').textContent="Viewed";
         });
-        front.classList.add('border_bottom');
-        right.classList.add('border_bottom');
-        right.classList.add('border_right');
-        left.classList.add('border_bottom');
-        left.classList.add('border_left');
+        console.log(screen.width);
+        if(screen.width<700){
+            subcontents_container.style.border="3px solid var(--projects-color";
+        }
+        else{
+
+            front.classList.add('border_bottom');
+            right.classList.add('border_bottom');
+            right.classList.add('border_right');
+            left.classList.add('border_bottom');
+            left.classList.add('border_left');
+        }
+        // shiftback the card to its position to the right
+        subcontents_container.parentElement.classList.toggle("shift-right");
+        
+        //Change the border of the entire card
+        // const mini_card=subcontents_container.parentElement;
+        // mini_card.style.border="3px solid var(--projects-color)";
 
     
 
