@@ -21,6 +21,7 @@
         top:0;
         left:20%;
         height: 100%;
+        transition: all 2s;
     }
     img:last-of-type{
         opacity: 0;
@@ -94,7 +95,6 @@
 
 .mini-card{
     position: relative;
-    right: 10%;
     transition: all 2s;
     .subcontent .card-title{
         position: relative;

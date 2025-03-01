@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded',run);
 
 function run(){
+    // Unfold Click
     const cards_head=document.querySelectorAll('.front .card-title');
-
     cards_head.forEach(card=>card.addEventListener('click',unfoldLeftRight));
+
+    // Contrast demo
+    const contrast_checkbox = document.querySelector('.contrast-checkbox input');
+    contrast_checkbox.addEventListener('click', showEnhancedImage)
+
     
         
 
@@ -55,5 +60,15 @@ function unfoldLeftRight(event)
         // mini_card.style.border="3px solid var(--projects-color)";
 
     
+
+}
+
+function showEnhancedImage(check_box_event){
+    const enhanced_image= document.getElementById('enhanced_image');
+    console.log(check_box_event.target.checked);
+    if(check_box_event.target.checked)
+        enhanced_image.style.opacity=1;
+    else
+        enhanced_image.style.opacity=0;
 
 }
