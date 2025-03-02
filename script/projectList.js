@@ -52,8 +52,7 @@ function unfoldLeftRight(event)
             left.classList.add('border_bottom');
             left.classList.add('border_left');
         }
-        // shiftback the card to its position to the right
-        subcontents_container.parentElement.classList.toggle("shift-right");
+       
         
         //Change the border of the entire card
         // const mini_card=subcontents_container.parentElement;

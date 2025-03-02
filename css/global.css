@@ -29,6 +29,11 @@ html, body{
 } */
 li{
     word-spacing: 0.3em;
+    display: flex;
+    align-items: center;
+    img{
+        height: 25px;
+    }
 }
 a{
     list-style: none;
@@ -50,6 +55,12 @@ p{
     text-align: justify;
     font-weight: 400;
     position: relative;
+}
+.title{
+    text-align: center;
+    font-weight: 700;
+    font-size: larger;
+    color:var(--tab-color-bold);
 }
 
 
