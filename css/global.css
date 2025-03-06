@@ -29,11 +29,7 @@ html, body{
 } */
 li{
     word-spacing: 0.3em;
-    display: flex;
-    align-items: center;
-    img{
-        height: 25px;
-    }
+    
 }
 a{
     list-style: none;
