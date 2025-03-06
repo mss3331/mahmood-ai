@@ -260,7 +260,7 @@ li{
     /* max-width: 80vw; */
     img{
         max-height: 300px;
-        max-width: 300px;
+        max-width: 250px;
         /* width: 300px; */
         /* width: fit-content;
         max-width: 75vw; */
@@ -294,7 +294,9 @@ footer span{
 
 /*********** Mobile style ****************/
 @media (max-width:700px) {
-    
+    .overlaping{
+        width: 250px;
+    }
     #project-list{
         .cards-container .mini-card{
             /* otherwise it will break the stiky property of the title */
@@ -304,6 +306,7 @@ footer span{
         }
         .subcontents-container{
             flex-direction: column;
+            align-items: center;
             .front{
                 border: none;
                 border-bottom: 2px dashed gray;
@@ -312,9 +315,12 @@ footer span{
             }
             .left{
                 /* border-right: 2px dashed gray; */
+                
                 order:3;
+                .face-content{
+                    width: fit-content;
+                }
                 img{
-                    max-width: 70vw;
                     max-height: none;
                 }
             }
