@@ -38,6 +38,7 @@ function unfoldLeftRight(event)
         const card_titles = subcontents_container.querySelectorAll('.card-title');
         card_titles.forEach(title=>{
             title.style.backgroundColor="var(--projects-color)";
+            title.style.borderBottom ="2px solid black";
             front.querySelector('.card-title p').textContent="Viewed";
         });
         console.log(screen.width);
