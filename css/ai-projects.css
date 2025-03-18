@@ -192,6 +192,7 @@ li{
         
         video{
             width: 100%;
+            max-width: 800px;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
         .face-content{
@@ -239,7 +240,7 @@ li{
         }
         
         .right{
-            width: 25%;
+            width: 50%;
             transform-origin: left center;
             /* transform: rotateY(0deg) ; */
         }
@@ -249,14 +250,12 @@ li{
         }
     }
 }
-.contrast-checkbox label{
-    color:var(--tab-color-bold);
-}
+
 .left .face-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
+    width: 250px;
     /* max-width: 80vw; */
     img{
         max-height: 300px;
@@ -291,6 +290,35 @@ footer span{
     color: blue;
 }
 
+/*********** Overlapping Effect style**********/
+.overlap-container{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    overflow: hidden;
+   
+    .overlap-item2{
+        position: absolute;
+        width: 50%;
+        overflow: hidden;
+        border-right: 3px dashed rgba(255, 255, 255, 0.3);
+    }
+    img{
+        max-width: 250px;
+        
+    }
+    .overlap-control{
+        position: absolute;
+        z-index: 1;
+        top:50%;
+        left: 50%;
+        transform: translateX(-57%);
+        /* Fontawosem <-> icon */
+        color:var(--projects-color);
+        cursor: pointer;
+        font-size: x-large;
+    }
+}
 
 /*********** Mobile style ****************/
 @media (max-width:700px) {

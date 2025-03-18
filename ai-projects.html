@@ -169,15 +169,22 @@
                                 
                                 <div class="card-title">-</div>
                                 <div class="face-content">
-                                    <div class="contrast-checkbox">
+                                    <!-- <div class="contrast-checkbox">
                                         <input id="contrast-moon" type="checkbox">
                                         <label for="contrast-moon">Enhance</label>
+                                    </div> -->
+                                    <div class="overlap-container">
+                                        <div class="overlap-item1">
+                                            <img src="./images/projects_images/contrast enhancement/original.png" alt="" srcset="">
+                                        </div>
+                                        <div class="overlap-control"><i class="fa-solid fa-arrows-left-right"></i></div>
+                                        <div class="overlap-item2">
+                                            <img src="./images/projects_images/contrast enhancement/enhanced.png" alt="" srcset="">
+                                        </div>
                                     </div>
-                                    <div class="overlaping">
-                                        <img src="./images/projects_images/contrast enhancement/original.png" alt="" srcset="">
-                                        <img id="enhanced_image" src="./images/projects_images/contrast enhancement/enhanced.png" alt="" srcset="">
-
-                                    </div>
+                                    <!-- <div>
+                                        <p id="screen-log"></p>
+                                    </div> -->
                                     
                                     
                                 </div>
@@ -193,9 +200,11 @@
                                     </div>
                                 </div>
                                 <div class="face-content">
-                                    <p class="title">Region-based Contrast Enhancement (Image Processing)</p>
+                                    <p class="title">Region-based Contrast Enhancement <br> (Image Processing)</p>
                                     <video src="./images/projects_images/contrast enhancement/front-video.mp4" muted autoplay controls loop></video>
+                                    
                                 </div>
+                                
                             </div>
                             <div class="subcontent right rotateLeft">
                                 <div class="card-title">-</div>
@@ -296,5 +305,6 @@
         
     </footer>
     <script src="script/global.js"></script>
+    <script src="script/overlapping.js"></script>
 </body>
 </html>

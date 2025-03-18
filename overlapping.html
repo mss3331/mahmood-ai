@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .overlap-container{
+            position: relative;
+            display: flex;
+            border: 2px solid black;
+            width: fit-content;
+            overflow: hidden;
+           
+            .overlap-item2{
+                position: absolute;
+                width: 50%;
+                overflow: hidden;
+            }
+            img{
+                max-width: 250px;
+                
+            }
+            .overlap-control{
+                position: absolute;
+                z-index: 1;
+                top:50%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="overlap-container">
+        <div class="overlap-item1">
+            <img src="./images/projects_images/contrast enhancement/original.png" alt="" srcset="">
+        </div>
+        <div class="overlap-control"><button>Move</button></div>
+        <div class="overlap-item2">
+            <img src="./images/projects_images/contrast enhancement/enhanced.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <script>
+      
+        let freez_control=true;
+        const overlap_container= document.querySelector('.overlap-container');
+        overlap_container.addEventListener('mousemove',moveOverlapControl);
+        overlap_container.addEventListener('touchmove',touchOverlapControl);
+        overlap_container.addEventListener('touchend',touchOverlapControlEnd);
+        const overlap_control= document.querySelector('.overlap-control');
+        overlap_control.addEventListener('mousedown',unfreezControl)
+        overlap_control.addEventListener('mouseup',freezControl)
+        const overlap_item2=document.querySelector('.overlap-item2');
+        
+        // This function update mouseX_difference cordinates (how much it moved along X). Firefox have a bug related to mouse position for dragge event.
+        function moveOverlapControl(event){
+            if(freez_control)
+            {
+                return;
+            }
+            const mouseX_updated= event.clientX;
+            console.log(mouseX_updated);
+            overlap_control.style.left=mouseX_updated+'px';
+            overlap_item2.style.width=mouseX_updated+'px';
+        }
+        //for Phone and Tablet
+        function touchOverlapControl(event){
+            // hide control
+            overlap_control.style.opacity='0.2';
+
+            const mouseX_updated= event.touches[0].clientX;
+            console.log(mouseX_updated);
+            overlap_control.style.left=mouseX_updated+'px';
+            overlap_item2.style.width=mouseX_updated+'px';
+        }
+        function touchOverlapControlEnd(event){
+            // show control
+            overlap_control.style.opacity='1';
+        }
+
+
+        function unfreezControl(event){
+            freez_control=false;
+        }
+        function freezControl(event){
+            freez_control=true;
+        }
+    </script>
+</body>
+</html>

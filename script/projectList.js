@@ -6,8 +6,8 @@ function run(){
     cards_head.forEach(card=>card.addEventListener('click',unfoldLeftRight));
 
     // Contrast demo
-    const contrast_checkbox = document.querySelector('.contrast-checkbox input');
-    contrast_checkbox.addEventListener('click', showEnhancedImage)
+    // const contrast_checkbox = document.querySelector('.contrast-checkbox input');
+    // contrast_checkbox.addEventListener('click', showEnhancedImage)
 
     
         
@@ -23,7 +23,7 @@ function unfoldLeftRight(event)
             subcontents_container = subcontents_container.parentElement;
         } 
         // Unboxing effect
-        const icons = subcontents_container.querySelectorAll('i');
+        const icons = subcontents_container.querySelectorAll('.front i');
         icons[0].classList.toggle('hide');
         icons[1].classList.toggle('hide');
 
