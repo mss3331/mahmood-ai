@@ -10,6 +10,7 @@ const overlap_item2=document.querySelector('.overlap-item2');
 let x;
 // This function update mouseX_difference cordinates (how much it moved along X). Firefox have a bug related to mouse position for dragge event.
 function moveOverlapControl(event){
+    //Calculate it only once, otherwise a lagging effect happened
     if(!x)
         x = Math.floor(event.target.getBoundingClientRect().x);
     // let screenLog = document.querySelector("#screen-log");
@@ -24,13 +25,13 @@ function moveOverlapControl(event){
     overlap_control.style.opacity='0.2';
     // x=starting position of the block with respect to the viewport.
     const mouseX_updated= event.clientX-x;
-    console.log(mouseX_updated);
-    console.log(overlap_control.style.left);
+ 
     overlap_control.style.left=mouseX_updated+'px';
     overlap_item2.style.width=mouseX_updated+'px';
 }
 //for Phone and Tablet
 function touchOverlapControl(event){
+    console.log(event.target.getBoundingClientRect().x);
     if(!x)
         x = Math.floor(event.target.getBoundingClientRect().x);
     // hide control
@@ -44,6 +45,7 @@ function touchOverlapControl(event){
 function touchOverlapControlEnd(event){
     // show control
     overlap_control.style.opacity='1';
+    x = Math.floor(event.target.getBoundingClientRect().x);
 }
 
 
