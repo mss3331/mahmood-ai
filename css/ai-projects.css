@@ -340,19 +340,22 @@ footer span{
                 border-bottom: 2px dashed gray;
                 order:1;
                 
+                
             }
             .left{
                 /* border-right: 2px dashed gray; */
-                
+                transform-origin: top center;
                 order:3;
                 .face-content{
                     width: fit-content;
                 }
                 img{
+                    width: 70vw;
                     max-height: none;
                 }
             }
             .right{
+                transform-origin: top center;
                 width:100%;
                 /* border-left: 2px dashed gray; */
                 order:2;
@@ -364,6 +367,7 @@ footer span{
                 max-width: 100%;
             }
             .rotateRight, .rotateLeft{
+                transform: rotateX(-170deg) ;
                 height: 0;
             }
             
