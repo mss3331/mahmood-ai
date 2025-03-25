@@ -104,6 +104,12 @@
         left: 2rem;
         margin-bottom: 1rem;
     }
+    .sub-content{
+        flex:1;
+    }
+    .sub-content:first-of-type{
+        flex:1.1;
+    }
 }
 
 
