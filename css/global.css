@@ -59,13 +59,21 @@ p{
     color:var(--tab-color-bold);
 }
 
-
+.card-text p:first-of-type{
+    text-indent: 0;
+}
 .initial-letter{
-    font-size: 200%;
+    font-size: 300%;
+    text-indent: 0;
+    padding: 0 10px;
+    line-height: 100%;
+    margin-right: 5px;
+    float: left;
     font-weight: bold;
-    color: var(--tab-color-bold);
     position: relative;
-    top:5px;
+    top: 10px;
+    color: var(--tab-color-bold);
+    border:2px solid var(--tab-color-bold);
 }
 .nav-transparent{
     top: -12%;
