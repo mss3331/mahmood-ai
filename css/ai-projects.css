@@ -119,6 +119,7 @@ li{
     
     .card-title{
         background-color: var(--projects-color);
+        
     }
     
     /* .not-viewed{
@@ -144,6 +145,7 @@ li{
         background-color: lightgray;
         transition: all 2s;
         justify-content: center;
+        border-top: 2px solid rgba(0, 0, 255, 0.2);
         border-bottom: 2px solid var(--projects-color);
         
         i{
@@ -230,6 +232,9 @@ li{
         }
         .left{
             transform-origin: right center;
+            .card-title{
+                border-left: 2px solid rgba(0, 0, 255, 0.2);
+            }
             /* transform: rotateY(0) ; */
             
         }
@@ -243,6 +248,10 @@ li{
         .right{
             width: 250px;
             transform-origin: left center;
+            
+            .card-title{
+                border-right: 2px solid rgba(0, 0, 255, 0.2);
+            }
             /* transform: rotateY(0deg) ; */
         }
         .rotateLeft{
