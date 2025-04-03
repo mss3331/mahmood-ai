@@ -7,12 +7,14 @@ const overlap_control= document.querySelector('.overlap-control');
 overlap_control.addEventListener('mousedown',unfreezControl)
 overlap_control.addEventListener('mouseup',freezControl)
 const overlap_item2=document.querySelector('.overlap-item2');
-let x;
+let x=1000;
 // This function update mouseX_difference cordinates (how much it moved along X). Firefox have a bug related to mouse position for dragge event.
 function moveOverlapControl(event){
-    //Calculate it only once, otherwise a lagging effect happened
-    if(!x)
-        x = Math.floor(event.target.getBoundingClientRect().x);
+    //The image Bounding Size changes due to rotate transformations
+    x = Math.min(x, Math.floor(event.target.getBoundingClientRect().x));
+    console.log(x);
+    // if(!x)
+    //     x = Math.floor(event.target.getBoundingClientRect().x);
     // let screenLog = document.querySelector("#screen-log");
     // screenLog.innerText = `
     // Screen X/Y: ${event.screenX} / ${event.screenY}

@@ -116,7 +116,7 @@ li{
 
 #project-list
 {
-    overflow: hidden;
+    
     .card-title{
         background-color: var(--projects-color);
     }
@@ -214,6 +214,7 @@ li{
             }
         }
         .front{
+            max-width: 500px;
             border-right: 2px dotted gray;
             border-left: 2px dotted gray;
             .card-title{
@@ -240,7 +241,7 @@ li{
         }
         
         .right{
-            width: 50%;
+            width: 250px;
             transform-origin: left center;
             /* transform: rotateY(0deg) ; */
         }
@@ -256,6 +257,8 @@ li{
     justify-content: center;
     align-items: center;
     width: 250px;
+    height: 100%;
+    padding:5px;
     /* max-width: 80vw; */
     img{
         max-height: 300px;
@@ -341,6 +344,9 @@ footer span{
                 order:1;
                 
                 
+            }
+            .face-content{
+                height: fit-content;
             }
             .left{
                 /* border-right: 2px dashed gray; */
