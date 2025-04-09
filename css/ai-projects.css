@@ -239,10 +239,8 @@ li{
             
         }
         .rotateRight{
-            transform: scaleX(0.1) rotateY(-170deg) ;
-            .subcontent-background{
-                transform:rotateY(0deg);
-            }
+            transform: scaleX(0.1) rotateY(-172deg) ;
+            
         }
         
         .right{
@@ -255,7 +253,7 @@ li{
             /* transform: rotateY(0deg) ; */
         }
         .rotateLeft{
-            transform: scaleX(0.1) rotateY(170deg) ;
+            transform: scaleX(0.1) rotateY(172deg) ;
             
         }
     }
