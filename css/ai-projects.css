@@ -37,6 +37,25 @@ li{
         opacity: 0;
     }
 }
+#ai_lifecycle{
+    position: relative;
+    
+    width: 100%;
+    p{
+        text-align: center;
+    }
+    video{
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+    }
+}
 #ai-intro{
     /* spinning loading icon */
     
@@ -45,10 +64,12 @@ li{
         position: relative;
     }
     .sub-content{
+        
         position: relative;
         text-align: justify;
         overflow: hidden;
         flex:1;
+        
     }
     
     .sub-content:first-of-type {
