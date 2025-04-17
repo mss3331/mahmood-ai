@@ -138,6 +138,9 @@ li{
 #project-list
 {
     
+    
+    
+    
     .card-title{
         background-color: var(--projects-color);
         
@@ -151,12 +154,21 @@ li{
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         
     } */
+    .rotation-animation{
+        position: relative;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        height: 400px;
+        z-index: 2;
+    }
     .cards-container{
+        position: relative;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        width: 80vw;
         background-color: rgb(245,245,245);
         padding: 1rem;
+
     }
     .subcontent .card-title{
         display: flex;
@@ -189,7 +201,7 @@ li{
     
    }
    .cards-container .mini-card{
-        position: relative;
+        position: absolute;
         display: flex;
         flex-direction: row;
         padding: 0;
@@ -201,8 +213,8 @@ li{
     .subcontents-container{
         position: relative;
         display: flex;
-        perspective: 1000px;
         transform-style: preserve-3d;
+        perspective: 1000px;
         perspective-origin: center -400px;
         width: 100%;
         justify-content: center;
@@ -350,18 +362,38 @@ footer span{
         font-size: x-large;
     }
 }
+/********** Pagination *******************/
+.pagination{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap:10px;
 
+}
+.pagination .pagination-button{
+    font-size: 2rem;
+    padding: 20px;
+    border: 2px solid var(--main-color);
+    
+}
 /*********** Mobile style ****************/
 @media (max-width:700px) {
     .overlaping{
         width: 250px;
     }
     #project-list{
+        .rotation-animation{
+            height: 300px;
+        }
+        .cards-container{
+            width: 100%;
+            height: fit-content;
+        }
         .cards-container .mini-card{
             /* otherwise it will break the stiky property of the title */
             overflow: hidden;
-            width: 100%;
-            padding: 0;
+            
         }
         .subcontents-container{
             flex-direction: column;
@@ -378,10 +410,11 @@ footer span{
             }
             .left{
                 /* border-right: 2px dashed gray; */
+                width: 100%;
                 transform-origin: top center;
                 order:3;
                 .face-content{
-                    width: fit-content;
+                    width: 100%;
                 }
                 img{
                     width: 70vw;
@@ -401,6 +434,7 @@ footer span{
                 max-width: 100%;
             }
             .rotateRight, .rotateLeft{
+                
                 transform: rotateX(-170deg) ;
                 height: 0;
             }
