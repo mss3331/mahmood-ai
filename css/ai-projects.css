@@ -338,7 +338,7 @@ footer span{
 }
 
 /*********** Overlapping Effect style**********/
-.overlap-container{
+.left .overlap-container{
     position: relative;
     display: flex;
     width: fit-content;
@@ -348,12 +348,10 @@ footer span{
         width: 50%;
         overflow: hidden;
         border-right: 3px dashed rgba(255, 255, 255, 0.3);
-        img{
-            height: 250px;
-        }
+        
     }
     img{
-        height: 250px;
+        width: 200px;
     }
     .overlap-control{
         position: absolute;
