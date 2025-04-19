@@ -158,6 +158,7 @@ li{
     }
     .cards-container{
         position: relative;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         width: 80vw;
@@ -216,6 +217,7 @@ li{
         width: 100%;
         height: 100%;
         justify-content: center;
+
         .subcontent{
             
             flex:1;
@@ -386,13 +388,16 @@ footer span{
         width: 250px;
     }
     #project-list{
-        .rotation-animation{
-            height: 300px;
-        }
         
+        height: fit-content;
+        
+        .mini-card{
+            height: fit-content;
+        }
         .cards-container{
             width: 100%;
             height: fit-content;
+            overflow: visible;
         }
         .cards-container .mini-card{
             /* otherwise it will break the stiky property of the title */
@@ -411,7 +416,7 @@ footer span{
                 
             }
             .face-content{
-                height: fit-content;
+                height: 100%;
             }
             .left{
                 /* border-right: 2px dashed gray; */
@@ -434,9 +439,10 @@ footer span{
                 
             }
             .subcontent{
-                
+                flex:none;
                 backface-visibility: hidden;
                 max-width: 100%;
+                height: fit-content;
             }
             .rotateRight, .rotateLeft{
                 
