@@ -151,7 +151,6 @@ li{
     .rotation-animation{
         position: relative;
         transform-style: preserve-3d;
-        
         perspective-origin: center -400px;
         height: 400px;
         z-index: 2;
@@ -406,7 +405,9 @@ footer span{
     #project-list{
         
         height: fit-content;
-        
+        .rotation-animation{
+            height: 300px;
+        }
         .mini-card{
             height: fit-content;
         }
@@ -438,7 +439,7 @@ footer span{
                 /* border-right: 2px dashed gray; */
                 width: 100%;
                 transform-origin: top center;
-                order:3;
+                order:2;
                 .face-content{
                     width: 100%;
                 }
@@ -451,7 +452,7 @@ footer span{
                 transform-origin: top center;
                 width:100%;
                 /* border-left: 2px dashed gray; */
-                order:2;
+                order:3;
                 
             }
             .subcontent{
