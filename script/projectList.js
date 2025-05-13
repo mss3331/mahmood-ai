@@ -5,13 +5,52 @@ function run(){
     const cards_head=document.querySelectorAll('.front .card-title');
     cards_head.forEach(card=>card.addEventListener('click',unfoldLeftRight));
 
-    // Contrast demo
-    // const contrast_checkbox = document.querySelector('.contrast-checkbox input');
-    // contrast_checkbox.addEventListener('click', showEnhancedImage)
+    //Rotation cards
+    const rotation_animation_cards= document.querySelectorAll('.rotation-animation');
+    rotation_animation_cards.forEach(
+        rotation_animation_container => positionMiniCards(rotation_animation_container)
+    );
+    
+    //Pagination arrows
+    const paginations = document.querySelectorAll('.pagination-button');
+    paginations.forEach(
+        pagination => pagination.addEventListener('click',activatePagination)
+    );
+
+    
 
     
         
 
+}
+//add behavior to pagination
+function activatePagination(event){
+
+    const pagination_button = event.currentTarget;
+    const rotation_offset = pagination_button.dataset.offset;
+    
+    const rotation_container = pagination_button.parentElement.parentElement.querySelector('.rotation-animation');
+    
+    if(rotation_container.style.transform.search('translateZ')<0)
+        rotation_container.style.transform="translateZ(-500px)";
+    rotation_container.style.transform +=`rotateY(${rotation_offset}deg)`;
+
+}
+// count how many mini cards and rotate accordingly
+function positionMiniCards(rotation_animation_container){
+    const mini_cards = rotation_animation_container.querySelectorAll('.mini-card');
+    const angle_offset = 360/mini_cards.length;
+    var angle=0;
+    mini_cards.forEach(mini_card=>{
+        mini_card.style.transform=`rotateY(${angle}deg) translateZ(500px)`;
+        angle+=angle_offset;
+    });
+
+    // set the angle offset for each pagination button. 
+    // later it will used to rotat roation_animation_container
+    const pagination = rotation_animation_container.parentElement.querySelector('.pagination');
+    pagination.querySelector('.pagination-left').setAttribute('data-offset',angle_offset);
+    pagination.querySelector('.pagination-right').setAttribute('data-offset',-angle_offset);
 }
 
 function unfoldLeftRight(event)

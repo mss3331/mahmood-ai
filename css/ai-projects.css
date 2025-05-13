@@ -154,12 +154,11 @@ li{
         perspective-origin: center -400px;
         height: 400px;
         z-index: 2;
-        transform: translateZ(-200px);
+        transform: translateZ(-500px) rotateY(0deg);
         transition: all 2s;
+        
     }
-    .rotation-animation:hover{
-        transform: translateZ(-300px) rotateY(-180deg);
-    }
+    
     .cards-container{
 
         transform-style: preserve-3d;
@@ -173,6 +172,7 @@ li{
         height: 450px;
         background-color: rgb(245,245,245);
         padding: 1rem;
+        gap: 1rem;
 
     }
     .subcontent .card-title{
@@ -214,6 +214,8 @@ li{
         padding: 0;
         border: none;
         background-color: transparent;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        background-color: rgba(145, 200, 255, 0.05);
     }
     
     /* This is the mini cards container that contains front left right faces */
@@ -225,7 +227,6 @@ li{
         width: 100%;
         height: 100%;
         justify-content: center;
-
         .subcontent{
             
             flex:1;
@@ -239,14 +240,21 @@ li{
         video{
             width: 100%;
             box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            
+            
+            
         }
+        
+        
+        
         .face-content{
             height: 90%;
-            justify-content: center;
-            align-items: center;
+            justify-content: top;
+            align-items: left;
             display: flex;
             flex-direction: column;
             padding: 0.5rem;
+            
             ul{
                 list-style: none;
                 display: flex;
@@ -254,10 +262,13 @@ li{
                 gap: 0.5rem;
             }
             p{
+                
                 text-indent: 0;
                 margin-bottom: 0.5rem;
             }
             strong{
+                
+                font-size: 1rem;
                 font-weight: 500;
             }
         }
@@ -265,6 +276,7 @@ li{
             z-index: 2;
             border-right: 2px dotted gray;
             border-left: 2px dotted gray;
+            
             .card-title{
                 cursor: pointer;
                 p{
@@ -376,12 +388,12 @@ footer span{
     }
 }
 
-.mini-card1{
+/* .mini-card1{
     transform: rotateY(180deg) translateZ(160px);
 }
 .mini-card2{
     transform: rotateY(0deg) translateZ(160px);
-}
+} */
 /********** Pagination *******************/
 .pagination{
     display: flex;
@@ -389,13 +401,19 @@ footer span{
     position: relative;
     width: 100%;
     gap:10px;
-
+    user-select: none;
 }
-.pagination .pagination-button{
+.pagination-button{
     font-size: 2rem;
     padding: 10px;
     border: 2px solid var(--main-color);
-    
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.pagination-button:hover{
+    border-color: var(--projects-color);
+    color: var(--projects-color);
+    background-color: white;
 }
 /*********** Mobile style ****************/
 @media (max-width:700px) {
@@ -414,7 +432,8 @@ footer span{
         .cards-container{
             width: 100%;
             height: fit-content;
-            overflow: auto;
+            overflow-y: auto;
+            
         }
         .cards-container .mini-card{
             /* otherwise it will break the stiky property of the title */
@@ -457,7 +476,6 @@ footer span{
             }
             .subcontent{
                 flex:none;
-                backface-visibility: hidden;
                 max-width: 100%;
                 height: fit-content;
             }
