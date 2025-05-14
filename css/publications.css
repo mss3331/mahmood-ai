@@ -168,7 +168,7 @@
         z-index: 1;
     }
     .publication-info{
-       font-size: small;
+       font-size: medium;
        p{
         text-indent: 0;
        }
