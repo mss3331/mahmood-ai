@@ -28,13 +28,13 @@ function activatePagination(event){
 
     const pagination_button = event.currentTarget;
     const rotation_offset = pagination_button.dataset.offset;
-    
     const rotation_container = pagination_button.parentElement.parentElement.querySelector('.rotation-animation');
-    
+    pagination_button.classList.toggle('pagination-button-no-shadow');
     if(rotation_container.style.transform.search('translateZ')<0)
         rotation_container.style.transform="translateZ(-500px)";
     rotation_container.style.transform +=`rotateY(${rotation_offset}deg)`;
-
+    setTimeout(function(){pagination_button.classList.toggle('pagination-button-no-shadow');},250);
+    
 }
 // count how many mini cards and rotate accordingly
 function positionMiniCards(rotation_animation_container){
