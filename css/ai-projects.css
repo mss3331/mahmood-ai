@@ -322,9 +322,11 @@ li{
 .title{
     font-size: 1rem;
 }
-.right .face-content{
+/* This could be used if you need to seperate between programming languages 
+and the details paragraph*/
+/* .right .face-content{
     justify-content: space-between;
-}
+} */
 .left .face-content{
     display: flex;
     justify-content: center;
