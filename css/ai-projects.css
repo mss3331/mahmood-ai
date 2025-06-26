@@ -132,7 +132,7 @@ li{
     }
 }
 
-#project-list
+#project-list, #ai-project-list
 {
     
     .card-title{
@@ -251,6 +251,7 @@ li{
             height: 90%;
             justify-content: top;
             align-items: left;
+            
             display: flex;
             flex-direction: column;
             padding: 0.5rem;
@@ -320,6 +321,9 @@ li{
 }
 .title{
     font-size: 1rem;
+}
+.right .face-content{
+    justify-content: space-between;
 }
 .left .face-content{
     display: flex;
@@ -424,7 +428,7 @@ footer span{
     .overlaping{
         width: 250px;
     }
-    #project-list{
+    #project-list, #ai-project-list{
         
         height: fit-content;
         .rotation-animation{
